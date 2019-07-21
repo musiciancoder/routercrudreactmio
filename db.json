@@ -1,0 +1,18 @@
+{
+  "restaurant": [
+    {
+      "precioPlatillo": "200",
+      "nombrePlatillo": "Cheesecake",
+      "categoria": "postres",
+      "id": 1
+    },
+    {
+      "precioPlatillo": "350",
+      "nombrePlatillo": "Rib Eye 400g",
+      "categoria": "cortes",
+      "id": 2
+    }
+
+
+  ]
+}
