@@ -20,7 +20,7 @@ function App() {
                 // consultar la api de json-server //consultar la api de json-server. En un caso mas elaborado la despuesta REST debe  ser generada con un lenguaje de backend como Node, Java o PHP
                 const resultado = await axios.get('http://localhost:4000/restaurant');
                 console.log(resultado.data); //esto se ve en console
-                guardarProductos(resultado); //le pasa el resultado de la api al state, esto se puede ver en React tools
+                guardarProductos(resultado.data); //le pasa el resultado de la api al state, esto se puede ver en React tools
             }
             consultarApi();
 
@@ -37,7 +37,7 @@ function App() {
             <Header /> {/*lo que esté fuera del Switch y dentro del Router se cargará automáticamente para todos los componentes cuyas URL hemos asignado con Route dentro del Switch*/}
             <main className="container mt-5">
                 <Switch>
-                    {/*  Asignar URL a un componente con exact-path */}
+                    {/*  Asignar URL a un componente con exact-path. Si queremos pasar props a un componente lo hacemos con Render, como en el primer caso, sino queremos pasar nada lo hacemos con component */}
                     <Route exact path="/productos"
                            render={ () => (
                                <Productos
